@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+Jogabilijam3/Assets/FungusExamples/
+
+Jogabilijam3/Assets/FungusExamples\.meta
