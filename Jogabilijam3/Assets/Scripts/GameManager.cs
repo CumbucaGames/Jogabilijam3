@@ -6,18 +6,25 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	[HideInInspector]
-	static public GameManager instancia { get; private set; }
+	static public GameManager Instancia { get; private set; }
 
 	//STATE MACHINE
 	public enum StateMachine { title, gameRun, gameOver };
 	public StateMachine state = StateMachine.title;
+	public string heroiNome, heroiMaleDefaultName, heroiFemaleDefaultName; 
 	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true;
 
 	private void Awake()
 	{
-		if (instancia == null) instancia = this;
+		if (Instancia == null) Instancia = this;
 		else Destroy(this);
 		DontDestroyOnLoad(this);
+	}
+
+	public void Start()
+	{
+		heroiMaleDefaultName = "Enzo";
+		heroiFemaleDefaultName = "Valentina";
 	}
 
 	void Update ()
