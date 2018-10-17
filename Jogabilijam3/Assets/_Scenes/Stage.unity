@@ -175,7 +175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1300, y: -1000}
+  m_AnchoredPosition: {x: 1300, y: -1307}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &95943632
@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 259430731}
   - component: {fileID: 259430730}
   - component: {fileID: 259430728}
+  - component: {fileID: 259430735}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -278,21 +279,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 47.09005, y: 22.017284}
+  scrollPos: {x: 93.22303, y: -4.3392467}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.8800001
+  zoom: 0.94000006
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 259430729}
-  selectedCommands:
-  - {fileID: 259430732}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -306,7 +305,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &259430728
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259430726}
@@ -321,7 +320,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1120459616}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 98606b09db781074182d19893ff2ceb9, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -351,7 +350,7 @@ MonoBehaviour:
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 0
-  blockName: New Block
+  blockName: INTRO
   description: 
   eventHandler: {fileID: 259430733}
   commandList:
@@ -361,7 +360,7 @@ MonoBehaviour:
   - {fileID: 259430728}
 --- !u!114 &259430730
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259430726}
@@ -387,7 +386,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &259430731
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259430726}
@@ -402,11 +401,11 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1120459616}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: abb7cd3371d5bf14cb7ea513f41fbbe4, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1160218501}
-  facing: 0
+  facing: 1
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
@@ -416,7 +415,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &259430732
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259430726}
@@ -431,11 +430,11 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 481041706}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1677ca776691c3d409f97e9cb8b82734, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 350203344}
-  facing: 0
+  facing: 2
   useDefaultSettings: 1
   fadeDuration: 0.5
   moveDuration: 1
@@ -471,6 +470,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259430735
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 259430726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 230.18271
+    y: 100.709984
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 5
+  blockName: CASA
+  description: 
+  eventHandler: {fileID: 0}
+  commandList: []
 --- !u!1 &330259313
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +505,7 @@ GameObject:
   - component: {fileID: 330259315}
   - component: {fileID: 330259314}
   m_Layer: 0
-  m_Name: mozaoF
+  m_Name: mozao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +543,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &342877678
 GameObject:
@@ -672,7 +695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -460.43, y: -1000}
+  m_AnchoredPosition: {x: -460.43, y: -1307}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &350203345
@@ -799,7 +822,7 @@ GameObject:
   - component: {fileID: 481041707}
   - component: {fileID: 481041706}
   m_Layer: 0
-  m_Name: heroiM
+  m_Name: heroi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +844,7 @@ MonoBehaviour:
   nameColor: {r: 0.9056604, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 9059cd2a4d20ffa40af078756ddbcc93, type: 3}
+  - {fileID: 21300000, guid: 1677ca776691c3d409f97e9cb8b82734, type: 3}
   portraitsFace: 2
   setSayDialog: {fileID: 0}
   description: 
@@ -837,7 +860,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565922524
 GameObject:
@@ -948,7 +971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1300, y: -1000}
+  m_AnchoredPosition: {x: -1300, y: -1307}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &582897951
@@ -1036,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714714354
 GameObject:
@@ -1122,9 +1145,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1120459617}
-  - {fileID: 1117476851}
   - {fileID: 481041707}
-  - {fileID: 1021114322}
   - {fileID: 330259315}
   - {fileID: 891122179}
   - {fileID: 1194178834}
@@ -1169,7 +1190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1000}
+  m_AnchoredPosition: {x: 0, y: -1307}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &780946013
@@ -1257,7 +1278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891122177
 GameObject:
@@ -1303,57 +1324,6 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891122177}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721876993}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1021114320
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: b20518d45890e4be59ba82946f88026c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1021114322}
-  - component: {fileID: 1021114321}
-  m_Layer: 0
-  m_Name: mozaoM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1021114321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1021114320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: "Mo\xE7o Rico"
-  nameColor: {r: 0.16316223, g: 0.7411765, b: 0, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: c567eb921d09fde4f94a8b7f5e33db4c, type: 3}
-  portraitsFace: 1
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &1021114322
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: b20518d45890e4be59ba82946f88026c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1021114320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1410,58 +1380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1117476849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: b20518d45890e4be59ba82946f88026c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1117476851}
-  - component: {fileID: 1117476850}
-  m_Layer: 0
-  m_Name: heroiF
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1117476850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1117476849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: Valentina
-  nameColor: {r: 0, g: 0.043819427, b: 1, a: 1}
-  soundEffect: {fileID: 0}
-  portraits:
-  - {fileID: 21300000, guid: 9059cd2a4d20ffa40af078756ddbcc93, type: 3}
-  portraitsFace: 2
-  setSayDialog: {fileID: 0}
-  description: 
---- !u!4 &1117476851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: b20518d45890e4be59ba82946f88026c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1117476849}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 721876993}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120459615
 GameObject:
@@ -1494,7 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: Papagaia Xica
   nameColor: {r: 0.802621, g: 1, b: 0, a: 1}
-  soundEffect: {fileID: 8300000, guid: 5c2a4c65966de374e939362d62d4a702, type: 3}
+  soundEffect: {fileID: 8300000, guid: 98606b09db781074182d19893ff2ceb9, type: 3}
   portraits:
   - {fileID: 21300000, guid: abb7cd3371d5bf14cb7ea513f41fbbe4, type: 3}
   portraitsFace: 2
@@ -1548,7 +1467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 460.43, y: -1000}
+  m_AnchoredPosition: {x: 460.43, y: -1307}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1160218502
@@ -1636,7 +1555,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388509993
 GameObject:
@@ -1803,5 +1722,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 721876993}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

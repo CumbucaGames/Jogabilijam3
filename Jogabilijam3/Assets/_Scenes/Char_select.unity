@@ -2058,19 +2058,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 273.2318, y: -335.12454}
+  scrollPos: {x: 372.12903, y: 30.43338}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.7900002
+  zoom: 0.96999955
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1380323964}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1380323938}
@@ -2335,7 +2334,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -7.3358765
     y: 142.96078
-    width: 175.31642
+    width: 165.46397
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2607,7 +2606,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 132.7717
     y: 246.7344
-    width: 193.03793
+    width: 181.95882
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2633,7 +2632,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -158.3667
     y: 247.83028
-    width: 177.84807
+    width: 166.4949
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2699,7 +2698,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.693342
     y: 383.58734
-    width: 172.78479
+    width: 163.40211
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2892,7 +2891,7 @@ MonoBehaviour:
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &1380323962
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1380323926}
@@ -2934,7 +2933,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -9.977656
     y: 491.0352
-    width: 171.51895
+    width: 162.37119
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

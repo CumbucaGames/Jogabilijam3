@@ -5,19 +5,85 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+	[HideInInspector]
+	static public GameManager instancia { get; private set; }
+
+	//STATE MACHINE
+	public enum StateMachine { title, gameRun, gameOver };
+	public StateMachine state = StateMachine.title;
+	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true;
+
+	private void Awake()
+	{
+		if (instancia == null) instancia = this;
+		else Destroy(this);
+		DontDestroyOnLoad(this);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Update ()
+	{
+		//Instruções e comandos que só podem ocorrer a qualquer momento do jogo
+			//Ativa ou desativa músicas e sons a qualquer momento
+			if (Input.GetKeyDown(KeyCode.J)) SetMusic();
+			if (Input.GetKeyDown(KeyCode.K)) SetSound();
+
+		//Instruções e comandos que só podem ocorrer durante a tela de título
+		if (state == StateMachine.title)
+		{
+			/*
+			if (Input.GetKeyDown(KeyCode.Return) || Input.touchCount > 1)
+			{
+				PlayGame();
+			}
+			*/
+
+			if (Input.GetKey(KeyCode.Escape)) CloseGame();
+		}
+
+		//Instruções e comandos que só podem ocorrer durante o jogo
+		if (state == StateMachine.gameRun)
+		{
+			
+		}
+
+		//Instruções e comandos que só podem ocorrer durante o game over
+		if (state == StateMachine.gameOver)
+		{
+			if (Input.GetKeyDown(KeyCode.Return)) ReturnToCheckPoint();
+		}
 	}
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Char_select");
     }
 
+	public void GameOver()
+	{
+		state = StateMachine.gameOver;
+	}
+
+	public void ReturnToCheckPoint()
+	{
+		//TODO
+	}
+
+	public void SetMusic()
+	{
+		if (music == false) music = true;
+		else music = false;
+		Debug.Log("Música: " + music);
+	}
+
+	public void SetSound()
+	{
+		if (sound == false) sound = true;
+		else sound = false;
+		Debug.Log("Sons: " + sound);
+	}
+
+	public void CloseGame()
+	{
+		Application.Quit();
+	}
 }
