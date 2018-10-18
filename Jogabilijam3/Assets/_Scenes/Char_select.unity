@@ -1416,7 +1416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1380323927
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1766,7 +1766,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -7.3358765
     y: 142.96078
-    width: 156.89658
+    width: 157.58623
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2038,7 +2038,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 132.7717
     y: 246.7344
-    width: 156.89658
+    width: 157.58623
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2064,7 +2064,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -158.3667
     y: 247.83028
-    width: 143.10347
+    width: 142.41382
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2130,7 +2130,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.693342
     y: 383.58734
-    width: 153.4483
+    width: 156.20691
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2365,7 +2365,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -9.977656
     y: 491.0352
-    width: 151.72415
+    width: 154.8276
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

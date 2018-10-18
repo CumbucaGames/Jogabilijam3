@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 public class GameManager : MonoBehaviour {
 
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour {
 	public StateMachine state = StateMachine.title;
 	public string heroiNome, heroiMaleDefaultName, heroiFemaleDefaultName; 
 	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true, isFirstGameRun = true;
+
+    //Inclui o flowchart do stage que está como prefab para poder setar a variavel do HeroiName
+    public Flowchart flowchart;
 
 	private void Awake()
 	{
@@ -101,4 +105,19 @@ public class GameManager : MonoBehaviour {
 	{
 		Application.Quit();
 	}
+
+    public void SetNameToFlowChart()
+    {
+        flowchart.SetStringVariable("HeroiName", heroiNome);
+    }
+
+    public void SetSexHeroiToFlowChart()
+    {
+        flowchart.SetBooleanVariable("HeroIsMale", heroiIsMale);
+    }
+
+    public void SetSexMozaoToFlowChart()
+    {
+        flowchart.SetBooleanVariable("MozaoIsFemale", mozaoIsFemale);
+    }
 }

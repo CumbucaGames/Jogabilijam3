@@ -138,6 +138,8 @@ MonoBehaviour:
   music: 1
   sound: 1
   isFirstGameRun: 1
+  flowchart: {fileID: 114445203911007402, guid: a9d43393d0c90fc4d9eb0e853283f299,
+    type: 2}
 --- !u!1 &320400230
 GameObject:
   m_ObjectHideFlags: 0
