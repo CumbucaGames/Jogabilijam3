@@ -111,6 +111,11 @@ public class GameManager : MonoBehaviour {
         flowchart.SetStringVariable("HeroiName", heroiNome);
     }
 
+    public void SetMozaoNameToFlowChart(string mozaoName)
+    {
+        flowchart.SetStringVariable("MozaoName", mozaoName);
+    }
+
     public void SetSexHeroiToFlowChart()
     {
         flowchart.SetBooleanVariable("HeroIsMale", heroiIsMale);
