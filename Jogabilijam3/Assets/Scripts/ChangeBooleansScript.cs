@@ -57,6 +57,7 @@ public class ChangeBooleansScript : MonoBehaviour {
 	public void StartStory()
 	{
 		GameManager.Instancia.heroiNome = nameInput.text;
+		GameManager.Instancia.isFirstGameRun = false;
 		SceneManager.LoadScene("Stage");
 	}
 

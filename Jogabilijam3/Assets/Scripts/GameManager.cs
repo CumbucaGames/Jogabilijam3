@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 	public enum StateMachine { title, gameRun, gameOver };
 	public StateMachine state = StateMachine.title;
 	public string heroiNome, heroiMaleDefaultName, heroiFemaleDefaultName; 
-	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true;
+	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true, isFirstGameRun = true;
 
 	private void Awake()
 	{
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
 		//Instruções e comandos que só podem ocorrer durante o jogo
 		if (state == StateMachine.gameRun)
 		{
-			
+			if (Input.GetKey(KeyCode.Escape)) PlayTitleScreen();
 		}
 
 		//Instruções e comandos que só podem ocorrer durante o game over
@@ -62,8 +62,16 @@ public class GameManager : MonoBehaviour {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Char_select");
+		isFirstGameRun = false;
+		state = StateMachine.gameRun;
+		SceneManager.LoadScene("Char_select");
     }
+
+	public void PlayTitleScreen()
+	{
+		state = StateMachine.title;
+		SceneManager.LoadScene("Title");
+	}
 
 	public void GameOver()
 	{
