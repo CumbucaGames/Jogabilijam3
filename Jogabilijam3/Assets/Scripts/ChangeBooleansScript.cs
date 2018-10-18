@@ -58,10 +58,10 @@ public class ChangeBooleansScript : MonoBehaviour {
 	{
 		GameManager.Instancia.heroiNome = nameInput.text;
 		GameManager.Instancia.isFirstGameRun = false;
-        GameManager.Instancia.SetNameToFlowChart();
-        GameManager.Instancia.SetMozaoNameToFlowChart(MozaoName.text);
-        GameManager.Instancia.SetSexHeroiToFlowChart();
-        GameManager.Instancia.SetSexMozaoToFlowChart();
+		GameManager.Instancia.SetNameToFlowChart();
+		GameManager.Instancia.SetMozaoNameToFlowChart(MozaoName.text);
+		GameManager.Instancia.SetSexHeroiToFlowChart();
+		GameManager.Instancia.SetSexMozaoToFlowChart();
 		SceneManager.LoadScene("Stage");
 	}
 

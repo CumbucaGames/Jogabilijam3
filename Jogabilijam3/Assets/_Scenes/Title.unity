@@ -113,33 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &159160368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1476601964217804, guid: e9e3ad75be054fd429c1bc91ad0f8d9d,
-    type: 2}
-  m_PrefabInternal: {fileID: 676389651}
---- !u!114 &159160369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 159160368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7d91f42bf4aee4b8579ed552d8bb80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  heroiNome: 
-  heroiMaleDefaultName: 
-  heroiFemaleDefaultName: 
-  heroiIsMale: 1
-  mozaoIsFemale: 1
-  music: 1
-  sound: 1
-  isFirstGameRun: 1
-  flowchart: {fileID: 114445203911007402, guid: a9d43393d0c90fc4d9eb0e853283f299,
-    type: 2}
 --- !u!1 &320400230
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,63 +203,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 320400230}
   m_CullTransparentMesh: 0
---- !u!1001 &676389651
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 527.68414
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 222.65363
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.875
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114987167719682694, guid: e9e3ad75be054fd429c1bc91ad0f8d9d,
-        type: 2}
-      propertyPath: heroiIsMale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114987167719682694, guid: e9e3ad75be054fd429c1bc91ad0f8d9d,
-        type: 2}
-      propertyPath: mozaoIsFemale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1476601964217804, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114987167719682694, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-  m_SourcePrefab: {fileID: 100100000, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &707151899
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 114439387692316516, guid: 72ceb846435b30d49b4f971eaa6b238b,
+    type: 2}
 --- !u!4 &748319001
 Transform:
   m_ObjectHideFlags: 1
@@ -759,6 +676,64 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1436038580
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 527.68414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 222.65363
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993639658863956, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987167719682694, guid: e9e3ad75be054fd429c1bc91ad0f8d9d,
+        type: 2}
+      propertyPath: flowchart
+      value: 
+      objectReference: {fileID: 114439387692316516, guid: 72ceb846435b30d49b4f971eaa6b238b,
+        type: 2}
+    - target: {fileID: 114987167719682694, guid: e9e3ad75be054fd429c1bc91ad0f8d9d,
+        type: 2}
+      propertyPath: heroiMaleDefaultName
+      value: Enzo
+      objectReference: {fileID: 0}
+    - target: {fileID: 114987167719682694, guid: e9e3ad75be054fd429c1bc91ad0f8d9d,
+        type: 2}
+      propertyPath: heroiFemaleDefaultName
+      value: Valentina
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9e3ad75be054fd429c1bc91ad0f8d9d, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1488684957
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +807,7 @@ Transform:
   m_LocalScale: {x: 1.947248, y: 1.947248, z: 1.947248}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694594693
 GameObject:
