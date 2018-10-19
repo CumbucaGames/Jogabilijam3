@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour {
 		heroiFemaleDefaultName = "Valentina";
 		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
 		MozaoName.text = "Juliana";
+		Debug.Log("CONLUIREMSJGABDTPZQV3");
 	}
 
 	void Update ()
