@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Fungus;
 
@@ -15,8 +16,12 @@ public class GameManager : MonoBehaviour {
 	public string heroiNome, heroiMaleDefaultName, heroiFemaleDefaultName; 
 	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true, isFirstGameRun = true;
 
-    //Inclui o flowchart do stage que está como prefab para poder setar a variavel do HeroiName
-    public Flowchart flowchart;
+	public GameObject heroiMale, heroiFemale, mozaoMale, mozaoFemale;
+	public InputField nameInput;
+	public Text MozaoName;
+
+	//Inclui o flowchart do stage que está como prefab para poder setar a variavel do HeroiName
+	public Flowchart flowchart;
 
 	private void Awake()
 	{
@@ -29,6 +34,8 @@ public class GameManager : MonoBehaviour {
 	{
 		heroiMaleDefaultName = "Enzo";
 		heroiFemaleDefaultName = "Valentina";
+		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
+		MozaoName.text = "Juliana";
 	}
 
 	void Update ()
@@ -125,4 +132,53 @@ public class GameManager : MonoBehaviour {
     {
         flowchart.SetBooleanVariable("MozaoIsFemale", mozaoIsFemale);
     }
+
+	public void ChangeHeroiName(string newName)
+	{
+		GameManager.Instancia.heroiNome = newName;
+	}
+
+	public void HeroiIsMale()
+	{
+		GameManager.Instancia.heroiIsMale = true;
+		heroiMale.SetActive(true);
+		heroiFemale.SetActive(false);
+		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
+	}
+
+	public void HeroiIsFemale()
+	{
+		GameManager.Instancia.heroiIsMale = false;
+		heroiMale.SetActive(false);
+		heroiFemale.SetActive(true);
+		nameInput.text = GameManager.Instancia.heroiFemaleDefaultName;
+
+	}
+
+	public void MozaoIsMale()
+	{
+		GameManager.Instancia.mozaoIsFemale = false;
+		mozaoMale.SetActive(true);
+		mozaoFemale.SetActive(false);
+		MozaoName.text = "Luiz";
+	}
+
+	public void MozaoIsFemale()
+	{
+		GameManager.Instancia.mozaoIsFemale = true;
+		mozaoMale.SetActive(false);
+		mozaoFemale.SetActive(true);
+		MozaoName.text = "Juliana";
+	}
+
+	public void StartStory()
+	{
+		GameManager.Instancia.heroiNome = nameInput.text;
+		GameManager.Instancia.isFirstGameRun = false;
+		GameManager.Instancia.SetNameToFlowChart();
+		GameManager.Instancia.SetMozaoNameToFlowChart(MozaoName.text);
+		GameManager.Instancia.SetSexHeroiToFlowChart();
+		GameManager.Instancia.SetSexMozaoToFlowChart();
+		SceneManager.LoadScene("Stage");
+	}
 }
