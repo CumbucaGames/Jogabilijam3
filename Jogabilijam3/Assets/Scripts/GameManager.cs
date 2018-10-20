@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 	public string heroiNome, heroiMaleDefaultName, heroiFemaleDefaultName; 
 	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true, isFirstGameRun = true;
 
-	public GameObject heroiMale, heroiFemale, mozaoMale, mozaoFemale;
+	public GameObject heroiMale, heroiFemale, mozaoMale, mozaoFemale, UIChooseSex;
 	public InputField nameInput;
 	public Text MozaoName;
 
@@ -145,16 +145,15 @@ public class GameManager : MonoBehaviour {
 		heroiMale.SetActive(true);
 		heroiFemale.SetActive(false);
 		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
-	}
+    }
 
 	public void HeroiIsFemale()
 	{
 		GameManager.Instancia.heroiIsMale = false;
-		heroiMale.SetActive(false);
+        heroiMale.SetActive(false);
 		heroiFemale.SetActive(true);
 		nameInput.text = GameManager.Instancia.heroiFemaleDefaultName;
-
-	}
+    }
 
 	public void MozaoIsMale()
 	{
@@ -162,7 +161,7 @@ public class GameManager : MonoBehaviour {
 		mozaoMale.SetActive(true);
 		mozaoFemale.SetActive(false);
 		MozaoName.text = "Luiz";
-	}
+    }
 
 	public void MozaoIsFemale()
 	{
@@ -170,7 +169,7 @@ public class GameManager : MonoBehaviour {
 		mozaoMale.SetActive(false);
 		mozaoFemale.SetActive(true);
 		MozaoName.text = "Juliana";
-	}
+    }
 
 	public void StartStory()
 	{
@@ -180,6 +179,8 @@ public class GameManager : MonoBehaviour {
 		GameManager.Instancia.SetMozaoNameToFlowChart(MozaoName.text);
 		GameManager.Instancia.SetSexHeroiToFlowChart();
 		GameManager.Instancia.SetSexMozaoToFlowChart();
-		SceneManager.LoadScene("Stage");
+        UIChooseSex.SetActive(false);
+        flowchart.SendFungusMessage("INTRO");
+
 	}
 }
