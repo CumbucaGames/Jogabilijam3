@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour {
 	static public GameManager Instancia { get; private set; }
 
 	//STATE MACHINE
-	public enum StateMachine { title, gameRun, gameOver };
-	public StateMachine state = StateMachine.title;
+	//public enum StateMachine { title, gameRun, gameOver };
+	//public StateMachine state = StateMachine.title;
 	public string heroiNome, heroiMaleDefaultName, heroiFemaleDefaultName; 
 	public bool heroiIsMale = true, mozaoIsFemale = true, music = true, sound = true, isFirstGameRun = true;
 
@@ -46,9 +46,10 @@ public class GameManager : MonoBehaviour {
 			if (Input.GetKeyDown(KeyCode.J)) SetMusic();
 			if (Input.GetKeyDown(KeyCode.K)) SetSound();
 
+		
 		//Instruções e comandos que só podem ocorrer durante a tela de título
-		if (state == StateMachine.title)
-		{
+		//if (state == StateMachine.title)
+		//{
 			/*
 			if (Input.GetKeyDown(KeyCode.Return) || Input.touchCount > 1)
 			{
@@ -57,37 +58,37 @@ public class GameManager : MonoBehaviour {
 			*/
 
 			if (Input.GetKey(KeyCode.Escape)) CloseGame();
-		}
+		//}
 
 		//Instruções e comandos que só podem ocorrer durante o jogo
-		if (state == StateMachine.gameRun)
-		{
+	//	if (state == StateMachine.gameRun)
+	//	{
 			if (Input.GetKey(KeyCode.Escape)) PlayTitleScreen();
-		}
+	//	}
 
 		//Instruções e comandos que só podem ocorrer durante o game over
-		if (state == StateMachine.gameOver)
-		{
-			if (Input.GetKeyDown(KeyCode.Return)) ReturnToCheckPoint();
-		}
+		//if (state == StateMachine.gameOver)
+	//	{
+			//if (Input.GetKeyDown(KeyCode.Return)) ReturnToCheckPoint();
+		//}
 	}
 
     public void PlayGame()
     {
 		isFirstGameRun = false;
-		state = StateMachine.gameRun;
+		//state = StateMachine.gameRun;
 		SceneManager.LoadScene("Char_select");
     }
 
 	public void PlayTitleScreen()
 	{
-		state = StateMachine.title;
+		//state = StateMachine.title;
 		SceneManager.LoadScene("Title");
 	}
 
 	public void GameOver()
 	{
-		state = StateMachine.gameOver;
+		//state = StateMachine.gameOver;
 	}
 
 	public void ReturnToCheckPoint()
@@ -127,7 +128,15 @@ public class GameManager : MonoBehaviour {
     public void SetSexHeroiToFlowChart()
     {
         flowchart.SetBooleanVariable("HeroIsMale", heroiIsMale);
-    }
+		if (heroiIsMale)
+		{
+			flowchart.SetStringVariable("Article", "o");
+		}
+		else
+		{
+			flowchart.SetStringVariable("Article", "a");
+		}
+	}
 
     public void SetSexMozaoToFlowChart()
     {
@@ -136,28 +145,28 @@ public class GameManager : MonoBehaviour {
 
 	public void ChangeHeroiName(string newName)
 	{
-		GameManager.Instancia.heroiNome = newName;
+		heroiNome = newName;
 	}
 
 	public void HeroiIsMale()
 	{
-		GameManager.Instancia.heroiIsMale = true;
+		heroiIsMale = true;
 		heroiMale.SetActive(true);
 		heroiFemale.SetActive(false);
-		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
+		nameInput.text = heroiMaleDefaultName;
     }
 
 	public void HeroiIsFemale()
 	{
-		GameManager.Instancia.heroiIsMale = false;
-        heroiMale.SetActive(false);
+		heroiIsMale = false;
+		heroiMale.SetActive(false);
 		heroiFemale.SetActive(true);
-		nameInput.text = GameManager.Instancia.heroiFemaleDefaultName;
+		nameInput.text = heroiFemaleDefaultName;
     }
 
 	public void MozaoIsMale()
 	{
-		GameManager.Instancia.mozaoIsFemale = false;
+		mozaoIsFemale = false;
 		mozaoMale.SetActive(true);
 		mozaoFemale.SetActive(false);
 		MozaoName.text = "Luiz";
@@ -165,7 +174,7 @@ public class GameManager : MonoBehaviour {
 
 	public void MozaoIsFemale()
 	{
-		GameManager.Instancia.mozaoIsFemale = true;
+		mozaoIsFemale = true;
 		mozaoMale.SetActive(false);
 		mozaoFemale.SetActive(true);
 		MozaoName.text = "Juliana";
@@ -173,14 +182,13 @@ public class GameManager : MonoBehaviour {
 
 	public void StartStory()
 	{
-		GameManager.Instancia.heroiNome = nameInput.text;
-		GameManager.Instancia.isFirstGameRun = false;
-		GameManager.Instancia.SetNameToFlowChart();
-		GameManager.Instancia.SetMozaoNameToFlowChart(MozaoName.text);
-		GameManager.Instancia.SetSexHeroiToFlowChart();
-		GameManager.Instancia.SetSexMozaoToFlowChart();
-        UIChooseSex.SetActive(false);
-        flowchart.SendFungusMessage("INTRO");
-
+		heroiNome = nameInput.text;
+		isFirstGameRun = false;
+		SetNameToFlowChart();
+		SetMozaoNameToFlowChart(MozaoName.text);
+		SetSexHeroiToFlowChart();
+		SetSexMozaoToFlowChart();
+		UIChooseSex.SetActive(false);
+		flowchart.SendFungusMessage("INTRO");
 	}
 }
