@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject heroiMale, heroiFemale, mozaoMale, mozaoFemale, UIChooseSex;
 	public InputField nameInput;
-	public Text MozaoName;
+	public Text MozaoName, HeroiCargo, MozaoCargo;
 
 	//Inclui o flowchart do stage que está como prefab para poder setar a variavel do HeroiName
 	public Flowchart flowchart;
@@ -32,10 +32,10 @@ public class GameManager : MonoBehaviour {
 
 	public void Start()
 	{
-		heroiMaleDefaultName = "Enzo";
-		heroiFemaleDefaultName = "Valentina";
+		heroiMaleDefaultName = "Enzo Gabriel";
+		heroiFemaleDefaultName = "Valentina Manuela";
 		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
-		MozaoName.text = "Juliana";
+		MozaoName.text = "Juliane Spavaccelli";
 		Debug.Log("CONLUIREMSJGABDTPZQV3");
 	}
 
@@ -154,7 +154,8 @@ public class GameManager : MonoBehaviour {
 		heroiMale.SetActive(true);
 		heroiFemale.SetActive(false);
 		nameInput.text = heroiMaleDefaultName;
-    }
+		HeroiCargo.text = "Ex ator Mirim e Motoboy";
+	}
 
 	public void HeroiIsFemale()
 	{
@@ -162,22 +163,25 @@ public class GameManager : MonoBehaviour {
 		heroiMale.SetActive(false);
 		heroiFemale.SetActive(true);
 		nameInput.text = heroiFemaleDefaultName;
-    }
+		HeroiCargo.text = "Digital Influencer Estagiária";
+	}
 
 	public void MozaoIsMale()
 	{
 		mozaoIsFemale = false;
 		mozaoMale.SetActive(true);
 		mozaoFemale.SetActive(false);
-		MozaoName.text = "Luiz";
-    }
+		MozaoName.text = "Luiz Toscanianni";
+		MozaoCargo.text = "Ex Modelo e CTO manager officer general";
+	}
 
 	public void MozaoIsFemale()
 	{
 		mozaoIsFemale = true;
 		mozaoMale.SetActive(false);
 		mozaoFemale.SetActive(true);
-		MozaoName.text = "Juliana";
+		MozaoName.text = "Juliane Spavaccelli";
+		MozaoCargo.text = "Ex Campeã Olímpica de Vôlei de Pântano e Analista de Causas Ambientais";
     }
 
 	public void StartStory()
