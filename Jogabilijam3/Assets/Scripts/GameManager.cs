@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 		heroiMaleDefaultName = "Enzo Gabriel";
 		heroiFemaleDefaultName = "Valentina Manuela";
 		nameInput.text = GameManager.Instancia.heroiMaleDefaultName;
-		MozaoName.text = "Juliane Spavaccelli";
+		MozaoName.text = "Juliane";
 		Debug.Log("CONLUIREMSJGABDTPZQV3");
 	}
 
@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour {
 		mozaoIsFemale = false;
 		mozaoMale.SetActive(true);
 		mozaoFemale.SetActive(false);
-		MozaoName.text = "Luiz Toscanianni";
+		MozaoName.text = "Luiz  Malik Schweitzer";
 		MozaoCargo.text = "Ex Modelo e CTO manager officer general";
 	}
 
